@@ -1,0 +1,27 @@
+---
+# https://docs.k8sgpt.ai/getting-started/in-cluster-operator/
+apiVersion: core.k8sgpt.ai/v1alpha1
+kind: K8sGPT
+metadata:
+  name: k8sgpt-sample
+  namespace: k8sgpt-operator-system
+spec:
+  ai:
+    enabled: true
+    model: gpt-4o-mini
+    backend: openai
+    secret:
+      name: k8sgpt-openai-secret
+      key: openai-api-key
+    # anonymized: false
+    # language: english
+  noCache: false
+  version: v0.4.2
+  # filters:
+  #   - Ingress
+  # sink:
+  #   type: slack
+  #   webhook: <webhook-url>
+  # extraOptions:
+  #   backstage:
+  #     enabled: true
