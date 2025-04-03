@@ -1,6 +1,7 @@
 #!/bin/bash
 folder=$(pwd)
-parent=$(dirname $folder)
+examples=$(dirname "$folder")
+parent=$(dirname "$examples")
 
 # Sources the cluster creation script that contains functions for creating
 # a k3d cluster and installing ArgoCD
