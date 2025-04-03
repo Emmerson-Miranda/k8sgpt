@@ -1,3 +1,7 @@
 #!/bin/bash
 
-source ../resources/scripts/cluster-destroy.sh 
+folder=$(pwd)
+examples=$(dirname "$folder")
+parent=$(dirname "$examples")
+
+source "$parent/resources/scripts/cluster-destroy.sh"

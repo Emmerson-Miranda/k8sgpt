@@ -1,11 +1,14 @@
 #!/bin/bash
+
+# Source: https://docs.k8sgpt.ai/getting-started/in-cluster-operator/
+
 folder=$(pwd)
 examples=$(dirname "$folder")
 parent=$(dirname "$examples")
 
 # Sources the cluster creation script that contains functions for creating
 # a k3d cluster and installing ArgoCD
-source ../resources/scripts/cluster-create.sh 
+source "$parent/resources/scripts/cluster-create.sh"
 
 create_kind_cluster $parent/resources 
 
@@ -19,7 +22,8 @@ else
     helm repo update
     helm install k8sgpt-poc k8sgpt/k8sgpt-operator -n $k8sgpt_namespace --create-namespace
 
-    OPENAI_TOKEN="${OPENAI_TOKEN:-not-provided}"
+    echo "$OPENAI_API_TOKEN"
+    OPENAI_TOKEN="${OPENAI_API_TOKEN:-not-provided}"
     kubectl create secret generic k8sgpt-openai-secret --from-literal=openai-api-key=$OPENAI_TOKEN -n $k8sgpt_namespace
 fi
 
