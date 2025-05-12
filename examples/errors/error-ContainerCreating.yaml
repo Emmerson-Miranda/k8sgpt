@@ -1,3 +1,9 @@
+---
+# ContainerCreating (Stuck)
+# Cause: Pod stuck initializing.
+# Possible Reasons: Volume mount issues, image download delays, or init containers not finishing.
+# Fix: Check events in kubectl describe pod and container statuses.
+#
 apiVersion: v1
 kind: Pod
 metadata:

@@ -1,3 +1,9 @@
+---
+# DNS Resolution Failures
+# Cause: Pods can't resolve internal service names.
+# Common Reasons: CoreDNS not working, wrong DNS policy, or network plugin issues.
+# Fix: Check CoreDNS logs: kubectl logs -n kube-system -l k8s-app=kube-dns.
+#
 apiVersion: v1
 kind: Pod
 metadata:

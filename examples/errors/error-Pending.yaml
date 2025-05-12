@@ -1,3 +1,9 @@
+---
+# Pending Pods
+# Cause: Pod cannot be scheduled to a node.
+# Common Reasons: Lack of resources (CPU/mem), missing tolerations or node selectors, unsatisfiable affinities.
+# Command: kubectl describe pod <pod> — look for "FailedScheduling".
+# 
 apiVersion: v1
 kind: Pod
 metadata:

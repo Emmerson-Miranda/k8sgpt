@@ -1,3 +1,8 @@
+---
+# NodeAffinity or Taints/Tolerations Mismatch
+# Cause: Pod can’t be scheduled due to conflicting scheduling rules.
+# Fix: Verify nodeAffinity, nodeSelector, tolerations, and the node's taints.
+#
 apiVersion: v1
 kind: Pod
 metadata:

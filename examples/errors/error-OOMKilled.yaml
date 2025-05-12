@@ -1,3 +1,10 @@
+---
+# OOMKilled
+# Cause: Container exceeded its memory limit.
+# Fix:
+#   Reassess memory limits in the Pod spec.
+#   Optimize app memory usage.
+#
 apiVersion: v1
 kind: Pod
 metadata:

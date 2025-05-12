@@ -1,3 +1,11 @@
+---
+# CrashLoopBackOff
+# Cause: Application crashes after starting.
+# Common Reasons: Misconfigured environment variables, unhandled exceptions, missing files/configs, or dependencies not ready.
+# How to Troubleshoot:
+#   kubectl logs <pod> -c <container>
+#   kubectl describe pod <pod> to check events and restart counts.
+#
 apiVersion: v1
 kind: Pod
 metadata:

@@ -1,3 +1,17 @@
+---
+# Readiness/Liveness Probe Failures
+# Cause: Health checks are failing, causing restarts or keeping Pod out of service.
+# Fix: Validate probe URLs/ports, increase initial delay, and check app logs.
+# Steps:
+# 1. Check the Pod status with `kubectl get pod readiness-failure-demo`.
+#    Column READY 0/1 means the readiness probe is failing.
+# 2. Check the Pod events with `kubectl describe pod readiness-failure-demo`.
+#    Look for events related to the readiness probe failure.
+# 3. Check the Pod logs with `kubectl logs readiness-failure-demo`.
+# 4. Check endpoints (if part of a Service): 
+#    If you’ve added this Pod to a Service, test with: kubectl get endpoints <service-name>
+#    The Pod will not appear in the endpoints until the readiness probe passes.
+#
 apiVersion: v1
 kind: Pod
 metadata:

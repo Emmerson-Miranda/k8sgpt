@@ -1,9 +1,15 @@
+---
+# Terminating (Stuck)
+# Cause: Pod does not terminate cleanly.
+# Common Reasons: Finalizers not completing, Pod with a long shutdown delay (terminationGracePeriodSeconds), or issues deleting volumes.
+# Fix: Check for finalizers in Pod manifest, or force delete as a last resort.
+#
 apiVersion: v1
 kind: Pod
 metadata:
   name: stuck-terminating-demo
   finalizers:
-  - example.com/finalizer #Pod does not terminate cleanly. Pod does not terminate cleanly.
+  - example.com/finalizer #Pod does not terminate cleanly. Pod does not terminate cleanly. Delete de pod to replicate 
 spec:
   containers:
   - name: nginx

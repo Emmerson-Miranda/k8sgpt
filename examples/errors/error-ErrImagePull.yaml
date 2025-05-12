@@ -1,3 +1,9 @@
+---
+# ImagePullBackOff / ErrImagePull
+# Cause: Kubernetes can’t fetch the container image.
+# Common Reasons: Wrong image name, private registry without credentials, image doesn’t exist.
+# Fix: Check image name and tag, add correct imagePullSecrets.
+#
 apiVersion: v1
 kind: Pod
 metadata:

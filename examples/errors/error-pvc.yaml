@@ -1,3 +1,8 @@
+---
+# VolumeMount or PVC Errors
+# Cause: Volumes not attaching or mounting.
+# Fix: Verify PVC status with kubectl get pvc, check storage class availability, and node-level permissions.
+#
 apiVersion: v1
 kind: Pod
 metadata:

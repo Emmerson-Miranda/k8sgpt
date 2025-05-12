@@ -1,3 +1,13 @@
+---
+# Readiness/Liveness Probe Failures
+# Cause: Health checks are failing, causing restarts or keeping Pod out of service.
+# Fix: Validate probe URLs/ports, increase initial delay, and check app logs.
+# Steps:
+# 1. Check the Pod status with `kubectl get pod liveness-failure-demo`.
+#    Look at the RESTARTS column. It should increase every time the liveness probe fails
+# 2. Describe the Pod: `kubectl describe pod liveness-failure-demo`. Look at the Events: section.
+# 3. Check container uptime: `kubectl get pod liveness-failure-demo -o jsonpath='{.status.containerStatuses[0].lastState.terminated.finishedAt}'
+#
 apiVersion: v1
 kind: Pod
 metadata:
