@@ -27,6 +27,4 @@ else
     kubectl create secret generic k8sgpt-openai-secret --from-literal=openai-api-key=$OPENAI_TOKEN -n $k8sgpt_namespace
 fi
 
-kubectl apply -f k8sgpt-sample.yaml -n $k8sgpt_namespace
-
 echo "Installation finished!"
