@@ -19,5 +19,4 @@ else
     k8sgpt auth add --backend openai --model gpt-4o-mini
 fi
 
-kubectl apply -f broken-pod.yml
-kubectl apply -f node-selector-pod.yml
+kubectl apply -k ../errors

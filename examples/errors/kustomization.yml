@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- error-ContainerCreating.yaml
+- error-CrashLoopBackOff.yaml
+- error-DNSresolution.yaml
+- error-ErrImagePull.yaml
+- error-Finalizer.yaml
+- error-OOMKilled.yaml
+- error-Pending.yaml
+- error-probe-liveness.yaml
+- error-probe-readiness.yaml
+- error-pvc.yaml
+- error-unschedulable.yaml
