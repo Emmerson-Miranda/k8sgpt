@@ -1,0 +1,12 @@
+# https://github.com/k8sgpt-ai/k8sgpt/blob/main/container/Dockerfile
+# https://github.com/k8sgpt-ai/k8sgpt/pkgs/container/k8sgpt
+
+#version: '2'
+services:
+ k8sgpt:
+   image: ghcr.io/k8sgpt-ai/k8sgpt:latest
+   network_mode: host
+   container_name: k8sgpt
+   volumes:
+     - ./k8sgpt.yaml:/home/root/.k8sgpt.yaml
+     - $HOME/.kube/config:/home/root/.kube/config:ro
