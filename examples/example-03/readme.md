@@ -1,4 +1,4 @@
-# K8S GPT Command Line
+# K8aGPT - Docker compose
 
 Runs k8sgpt using docker compose.
 

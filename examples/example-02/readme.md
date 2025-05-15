@@ -1,4 +1,4 @@
-# K8S GPT Command Line
+# K8sGPT Command Line
 
 Uses command line to analyse problem in the cluster.
 

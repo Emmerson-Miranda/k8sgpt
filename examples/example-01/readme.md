@@ -1,4 +1,4 @@
-# example-01
+# K8sGPT Operator
 
 Basic installation of k8sGPT operator (chart) in KinD.
 
